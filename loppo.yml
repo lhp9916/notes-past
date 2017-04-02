@@ -1,0 +1,4 @@
+dir: docs
+output: dist
+theme: oceandeep
+site: 学习笔记
