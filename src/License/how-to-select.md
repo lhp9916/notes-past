@@ -3,4 +3,4 @@
 最流行的六种：
 GPL、BSD、MIT、Mozilla、Apache 和 LGPL。
 
-![](../images/license.png)
+![](http://onru0wbs0.bkt.clouddn.com/License/license.png)
