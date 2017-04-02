@@ -1,4 +1,4 @@
-dir: docs
-output: dist
+dir: src
+output: docs
 theme: oceandeep
 site: 学习笔记

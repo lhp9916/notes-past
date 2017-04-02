@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>linux 解压缩命令 - 学习笔记</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="../assets/css/bulma.min.css">
+<link rel="stylesheet" href="../assets/css/app.css">
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="shortcut icon" href="">
+</head>
+<body>
+
+<nav class="columns navbar">
+  <div class="column logo is-3 is-offset-1">
+    <a class="is-brand" href="../index.html">
+      学习笔记
+    </a>
+  </div>
+</nav>
+
+<div class="columns content">
+  <div class="column is-2-desktop is-3-widescreen is-hidden-touch">
+  </div>
+  <div class="column article-container is-11-tablet is-8-desktop is-6-widescreen">
+    <div class="breadcrumb-area"><a href="../index.html" class="breadcrumb-item">Home</a><span class="breadcrumb-delimiter"> &gt; </span><a href="../linux/index.html" class="breadcrumb-item">Linux</a><span class="breadcrumb-delimiter"> &gt; </span><a href="../linux/compress.html" class="breadcrumb-item">linux 解压缩命令</a></div>
+    <h1 class="article-title">linux 解压缩命令</h1>
+    <div class="article">
+      <h4 id="tar">.tar <a class="markdownIt-Anchor" href="#tar">#</a></h4>
+<pre class="hljs"><code>解包： tar -xvf filename.tar
+
+打包： tar -cvf filename.tar dirname
+-x 解打包
+-c 打包
+-v 显示过程
+-f 指定文件名
+(注：tar是打包，不是压缩)
+</code></pre>
+<h4 id="targz">.tar.gz <a class="markdownIt-Anchor" href="#targz">#</a></h4>
+<pre class="hljs"><code>解压： tar -zxvf filename.tar.gz
+
+压缩： tar -zcvf filename.tar.gz dirname
+</code></pre>
+<h4 id="tarbz2">.tar.bz2 <a class="markdownIt-Anchor" href="#tarbz2">#</a></h4>
+<pre class="hljs"><code>解压： tar -jxvf filename.tar.bz2
+
+压缩： tar -jcvf filename.tar.bz2 dirname
+</code></pre>
+<h3 id="zip">.zip <a class="markdownIt-Anchor" href="#zip">#</a></h3>
+<pre class="hljs"><code>解压： unzip filename.zip
+
+压缩： zip filename.zip filename
+      zip -r filename.zip dirname
+</code></pre>
+
+      
+    </div>
+    <div class="level article-bar is-mobile">
+      <div class="level-item has-text-centered">
+        <a title="previous page" class="previouse-article-link" href="../linux/index.html"><span class="icon icon-previous" data-icon="previous"></span><span class="link-content">&laquo; Previous</span></a>
+      </div>
+      <div class="level-item has-text-centered">
+        <a title="font size" class="link-item link-item-size">
+          <span class="icon icon-size" data-icon="size"></span>
+        </a>
+      </div>
+      <div class="level-item has-text-centered">
+        <a title="table of content" class="link-item link-item-toc">
+          <span class="icon icon-toc" data-icon="toc"></span>
+        </a>
+      </div>
+      <div class="level-item has-text-centered">
+        <a title="top" href="#">
+          <span class="icon icon-up" data-icon="up"></span>
+          <span class="link-content">⤊ Top</span>
+        </a>
+      </div>
+      <div class="level-item has-text-centered">
+        <a title="next page" class="next-article-link" href="../linux/vim.html"><span class="icon icon-next" data-icon="next"></span><span class="link-content">Next &raquo;</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="column is-2-widescreen is-hidden">
+  </div>
+</div>
+
+<div class="columns foot">
+  <div class="column is-3 is-offset-9 build-by">
+    Build by <a href="https://github.com/ruanyf/loppo" target="_blank">Loppo</a> 0.5.0
+  </div>
+</div>
+
+<div class="book-toc notification is-warning is-hidden">
+  <h3>Table of chapters &nbsp;<span class="title-close"><a class="button is-danger"> Close </a></span></h3>
+  <ul class="chapter-area"><li class="chapter-item "><a href="../License/index.html">License</a>&nbsp;<a class="first-level-collapse"><span class="icon icon-expand" data-icon="expand"></span></a></li><ul class="chapter-level-1"><li class="chapter-item "><a href="../License/how-to-select.html">如何选择开源许可证？</a></li></ul><li class="chapter-item "><a href="../Restful-API/index.html">Restful API</a>&nbsp;<a class="first-level-collapse"><span class="icon icon-expand" data-icon="expand"></span></a></li><ul class="chapter-level-1"><li class="chapter-item "><a href="../Restful-API/introduction.html">Restful API</a></li></ul><li class="chapter-item "><a href="../front-end/index.html">Web 前端</a>&nbsp;<a class="first-level-collapse"><span class="icon icon-expand" data-icon="expand"></span></a></li><ul class="chapter-level-1"><li class="chapter-item "><a href="../front-end/cors.html">跨域请求</a></li><li class="chapter-item "><a href="../front-end/gulp-imagemin.html">gulp 压缩图片</a></li><li class="chapter-item "><a href="../front-end/layer.html">layer——优雅的web弹层组件</a></li><li class="chapter-item "><a href="../front-end/npm.html">NPM</a></li></ul><li class="chapter-item "><a href="../git/index.html">Git</a>&nbsp;<a class="first-level-collapse"><span class="icon icon-expand" data-icon="expand"></span></a></li><ul class="chapter-level-1"><li class="chapter-item "><a href="../git/tag.html">打标签</a></li></ul><li class="chapter-item "><a href="../laravel/index.html">Laravel</a>&nbsp;<a class="first-level-collapse"><span class="icon icon-expand" data-icon="expand"></span></a></li><ul class="chapter-level-1"><li class="chapter-item "><a href="../laravel/event.html">Laravel 的事件系统</a></li><li class="chapter-item "><a href="../laravel/upload.html">文件上传</a></li></ul><li class="chapter-item "><a href="../linux/index.html">Linux</a>&nbsp;<a class="first-level-collapse"><span class="icon icon-collapse" data-icon="collapse"></span></a></li><ul class="chapter-level-1 chapter-level-1-current"><li class="chapter-item chapter-item-current"><a href="../linux/compress.html">linux 解压缩命令</a></li><li class="chapter-item "><a href="../linux/vim.html">vim 常用的命令</a></li></ul><li class="chapter-item "><a href="../nginx/index.html">Nginx</a>&nbsp;<a class="first-level-collapse"><span class="icon icon-expand" data-icon="expand"></span></a></li><ul class="chapter-level-1"><li class="chapter-item "><a href="../nginx/vhost.html">nginx 配置虚拟主机</a></li></ul><li class="chapter-item "><a href="../php-base/index.html">PHP 基础</a>&nbsp;<a class="first-level-collapse"><span class="icon icon-expand" data-icon="expand"></span></a></li><ul class="chapter-level-1"><li class="chapter-item "><a href="../php-base/PDO.html">PDO</a></li></ul></ul>
+</div>
+
+<div class="progress-indicator"></div>
+
+<!-- SCRIPTS -->
+<script>
+  var LOPPO = {};
+  LOPPO.current_path = 'linux/compress.md';
+  LOPPO.relative_root_path = '../';
+  LOPPO.article_toc = "<ul class=\"markdownIt-TOC\">\n<li>\n<ul>\n<li><a href=\"#zip\">.zip</a></li>\n</ul>\n</li>\n</ul>\n";
+</script>
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>
+
