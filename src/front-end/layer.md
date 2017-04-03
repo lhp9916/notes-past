@@ -1,6 +1,6 @@
 # layer——优雅的web弹层组件
 
-在web应用交互体验中，弹出框是一个十分重要功能，可是浏览器原生的alert却是这般模样，
+在web应用交互体验中，弹出框是一个十分重要功能，可是浏览器原生的alert却是这般模样
 
 ![](http://oncsg1snd.bkt.clouddn.com/images/20160928/alert.jpg)
 
@@ -9,7 +9,7 @@
 ![墨绿风格](http://oncsg1snd.bkt.clouddn.com/images/20160928/molv.jpg)
 
 我简单介绍下用法和我的封装 `dialog.js`
-```
+```javascript
 var dialog = {
     //错误弹出层
     error: function (message) {
@@ -54,7 +54,7 @@ var dialog = {
 }
 ```
 具体用法，先引入js文件，（注意，layer依赖jquery）
-```
+```html
 <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="js/layer/layer.js"></script>
 <script type="text/javascript" src="js/dialog.js"></script>

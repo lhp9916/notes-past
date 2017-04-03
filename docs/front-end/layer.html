@@ -32,58 +32,58 @@
     <div class="breadcrumb-area"><a href="../index.html" class="breadcrumb-item">Home</a><span class="breadcrumb-delimiter"> &gt; </span><a href="../front-end/index.html" class="breadcrumb-item">Web 前端</a><span class="breadcrumb-delimiter"> &gt; </span><a href="../front-end/layer.html" class="breadcrumb-item">layer——优雅的web弹层组件</a></div>
     <h1 class="article-title">layer——优雅的web弹层组件</h1>
     <div class="article">
-      <p>在web应用交互体验中，弹出框是一个十分重要功能，可是浏览器原生的alert却是这般模样，</p>
+      <p>在web应用交互体验中，弹出框是一个十分重要功能，可是浏览器原生的alert却是这般模样</p>
 <figure><img src="http://oncsg1snd.bkt.clouddn.com/images/20160928/alert.jpg" alt=""></figure>
 <p>这模样在现代化的web页面中实在不忍直视，今天给大家推荐一个优雅的web弹层的组件——layer。先一睹为快</p>
 <figure><img src="http://oncsg1snd.bkt.clouddn.com/images/20160928/molv.jpg" alt="墨绿风格"><figcaption>墨绿风格</figcaption></figure>
 <p>我简单介绍下用法和我的封装 <code>dialog.js</code></p>
-<pre class="hljs"><code>var dialog = {
-    //错误弹出层
-    error: function (message) {
+<pre class="hljs"><code><span class="hljs-keyword">var</span> dialog = {
+    <span class="hljs-comment">//错误弹出层</span>
+    error: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message</span>) </span>{
         layer.open({
-            content: message,
-            icon: 2,
-            title: '错误提示',
+            <span class="hljs-attr">content</span>: message,
+            <span class="hljs-attr">icon</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">title</span>: <span class="hljs-string">'错误提示'</span>,
         });
     },
 
-    //成功弹出层
-    success: function (message, url) {
+    <span class="hljs-comment">//成功弹出层</span>
+    success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message, url</span>) </span>{
         layer.open({
-            content: message,
-            icon: 1,
-            yes: function () {
+            <span class="hljs-attr">content</span>: message,
+            <span class="hljs-attr">icon</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">yes</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
                 location.href = url;
             }
         });
     },
 
-    //确认弹出框
-    confirm: function (message, url) {
+    <span class="hljs-comment">//确认弹出框</span>
+    confirm: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message, url</span>) </span>{
         layer.open({
-            content: message,
-            icon: 3,
-            btn: ['是', '否'],
-            yes: function () {
+            <span class="hljs-attr">content</span>: message,
+            <span class="hljs-attr">icon</span>: <span class="hljs-number">3</span>,
+            <span class="hljs-attr">btn</span>: [<span class="hljs-string">'是'</span>, <span class="hljs-string">'否'</span>],
+            <span class="hljs-attr">yes</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
                 location.href = url;
             },
         });
     },
 
-    //无需跳转到指定页面的确认弹出框
-    toConfirm: function (message) {
+    <span class="hljs-comment">//无需跳转到指定页面的确认弹出框</span>
+    toConfirm: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message</span>) </span>{
         layer.open({
-            content: message,
-            icon: 3,
-            btn: ['确定'],
+            <span class="hljs-attr">content</span>: message,
+            <span class="hljs-attr">icon</span>: <span class="hljs-number">3</span>,
+            <span class="hljs-attr">btn</span>: [<span class="hljs-string">'确定'</span>],
         });
     },
 }
 </code></pre>
 <p>具体用法，先引入js文件，（注意，layer依赖jquery）</p>
-<pre class="hljs"><code>&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-3.1.1.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;js/layer/layer.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;js/dialog.js&quot;&gt;&lt;/script&gt;
+<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/jquery-3.1.1.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/layer/layer.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/dialog.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 <p>接着在js代码中调用，</p>
 <pre class="hljs"><code>dialog.error(<span class="hljs-string">"登录失败！"</span>);
