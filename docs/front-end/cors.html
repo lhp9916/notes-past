@@ -32,7 +32,7 @@
     <div class="breadcrumb-area"><a href="../index.html" class="breadcrumb-item">Home</a><span class="breadcrumb-delimiter"> &gt; </span><a href="../front-end/index.html" class="breadcrumb-item">Web 前端</a><span class="breadcrumb-delimiter"> &gt; </span><a href="../front-end/cors.html" class="breadcrumb-item">跨域请求</a></div>
     <h1 class="article-title">跨域请求</h1>
     <div class="article">
-      <h3 id="一、jsonp">一、JSONP <a class="markdownIt-Anchor" href="#一、jsonp">#</a></h3>
+      <h2 id="jsonp">JSONP <a class="markdownIt-Anchor" href="#jsonp">#</a></h2>
 <p>前端：</p>
 <pre class="hljs"><code>$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     $.ajax({
@@ -51,7 +51,7 @@
 <span class="hljs-keyword">return</span> $jsonp . <span class="hljs-string">"("</span> . $json_data . <span class="hljs-string">")"</span>;
 </code></pre>
 <p>JSONP只能用于GET方法。</p>
-<h3 id="二、cors">二、CORS <a class="markdownIt-Anchor" href="#二、cors">#</a></h3>
+<h2 id="cors">CORS <a class="markdownIt-Anchor" href="#cors">#</a></h2>
 <p>CORS 是一个W3C标准，全称是&quot;跨域资源共享&quot;（Cross-origin resource sharing）。<a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="noopener">参考阮一峰老师博客</a>。<br>
 只需要在服务端添加这两行即可，前台无需任何变化。</p>
 <pre class="hljs"><code>header(<span class="hljs-string">"Access-Control-Allow-Origin: *"</span>);
@@ -107,7 +107,7 @@ header(<span class="hljs-string">"Access-Control-Allow-Methods: GET, POST"</span
   var LOPPO = {};
   LOPPO.current_path = 'front-end/cors.md';
   LOPPO.relative_root_path = '../';
-  LOPPO.article_toc = "<ul class=\"markdownIt-TOC\">\n<li>\n<ul>\n<li><a href=\"#%E4%B8%80%E3%80%81jsonp\">一、JSONP</a></li>\n<li><a href=\"#%E4%BA%8C%E3%80%81cors\">二、CORS</a></li>\n</ul>\n</li>\n</ul>\n";
+  LOPPO.article_toc = "<ul class=\"markdownIt-TOC\">\n<li><a href=\"#jsonp\">JSONP</a></li>\n<li><a href=\"#cors\">CORS</a></li>\n</ul>\n";
 </script>
 <script src="../assets/js/app.js"></script>
 

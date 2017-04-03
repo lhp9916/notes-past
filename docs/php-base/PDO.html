@@ -33,7 +33,7 @@
     <h1 class="article-title">PDO </h1>
     <div class="article">
       <p><a href="http://php.net/manual/zh/intro.pdo.php" target="_blank" rel="noopener">文档地址</a></p>
-<h3 id="连接">连接 <a class="markdownIt-Anchor" href="#连接">#</a></h3>
+<h2 id="连接">连接 <a class="markdownIt-Anchor" href="#连接">#</a></h2>
 <pre class="hljs"><code><span class="hljs-keyword">try</span> {
     $dbh = <span class="hljs-keyword">new</span> PDO(<span class="hljs-string">'mysql:host=localhost;dbname=test'</span>, $user, $pass);
     <span class="hljs-keyword">foreach</span>($dbh-&gt;query(<span class="hljs-string">'SELECT * from FOO'</span>) <span class="hljs-keyword">as</span> $row) {
@@ -48,7 +48,7 @@
 $dbh = <span class="hljs-keyword">null</span>;
 </code></pre>
 <p>要想关闭连接，需要销毁对象以确保所有剩余到它的引用都被删除，可以赋一个 NULL 值给对象变量。如果不明确地这么做，PHP 在脚本结束时会自动关闭连接。</p>
-<h3 id="事务">事务 <a class="markdownIt-Anchor" href="#事务">#</a></h3>
+<h2 id="事务">事务 <a class="markdownIt-Anchor" href="#事务">#</a></h2>
 <pre class="hljs"><code><span class="hljs-keyword">try</span> {  
   $dbh-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -63,7 +63,7 @@ $dbh = <span class="hljs-keyword">null</span>;
   <span class="hljs-keyword">echo</span> <span class="hljs-string">"Failed: "</span> . $e-&gt;getMessage();
 }
 </code></pre>
-<h3 id="预处理语句">预处理语句 <a class="markdownIt-Anchor" href="#预处理语句">#</a></h3>
+<h2 id="预处理语句">预处理语句 <a class="markdownIt-Anchor" href="#预处理语句">#</a></h2>
 <pre class="hljs"><code>$stmt = $dbh-&gt;prepare(<span class="hljs-string">"INSERT INTO REGISTRY (name, value) VALUES (:name, :value)"</span>);
 $stmt-&gt;bindParam(<span class="hljs-string">':name'</span>, $name);
 $stmt-&gt;bindParam(<span class="hljs-string">':value'</span>, $value);
@@ -88,7 +88,7 @@ $stmt-&gt;execute();
 $stmt = $dbh-&gt;prepare(<span class="hljs-string">"SELECT * FROM REGISTRY where name LIKE ?"</span>);
 $stmt-&gt;execute(<span class="hljs-keyword">array</span>(<span class="hljs-string">"%$_GET[name]%"</span>));
 </code></pre>
-<h3 id="存储过程">存储过程 <a class="markdownIt-Anchor" href="#存储过程">#</a></h3>
+<h2 id="存储过程">存储过程 <a class="markdownIt-Anchor" href="#存储过程">#</a></h2>
 <pre class="hljs"><code><span class="hljs-comment">//带输出参数调用存储过程</span>
 $stmt = $dbh-&gt;prepare(<span class="hljs-string">"CALL sp_returns_string(?)"</span>);
 $stmt-&gt;bindParam(<span class="hljs-number">1</span>, $return_value, PDO::PARAM_STR, <span class="hljs-number">4000</span>); 
@@ -151,7 +151,7 @@ $stmt-&gt;execute();
   var LOPPO = {};
   LOPPO.current_path = 'php-base/PDO.md';
   LOPPO.relative_root_path = '../';
-  LOPPO.article_toc = "<ul class=\"markdownIt-TOC\">\n<li>\n<ul>\n<li><a href=\"#%E8%BF%9E%E6%8E%A5\">连接</a></li>\n<li><a href=\"#%E4%BA%8B%E5%8A%A1\">事务</a></li>\n<li><a href=\"#%E9%A2%84%E5%A4%84%E7%90%86%E8%AF%AD%E5%8F%A5\">预处理语句</a></li>\n<li><a href=\"#%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B\">存储过程</a></li>\n</ul>\n</li>\n</ul>\n";
+  LOPPO.article_toc = "<ul class=\"markdownIt-TOC\">\n<li><a href=\"#%E8%BF%9E%E6%8E%A5\">连接</a></li>\n<li><a href=\"#%E4%BA%8B%E5%8A%A1\">事务</a></li>\n<li><a href=\"#%E9%A2%84%E5%A4%84%E7%90%86%E8%AF%AD%E5%8F%A5\">预处理语句</a></li>\n<li><a href=\"#%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B\">存储过程</a></li>\n</ul>\n";
 </script>
 <script src="../assets/js/app.js"></script>
 

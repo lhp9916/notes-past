@@ -1,6 +1,6 @@
 # 文件上传
 
-配置文件 config/filesystems.php
+配置文件 `config/filesystems.php`
 
 ```php
 'disks' => [

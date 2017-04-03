@@ -32,11 +32,11 @@
     <div class="breadcrumb-area"><a href="../index.html" class="breadcrumb-item">Home</a><span class="breadcrumb-delimiter"> &gt; </span><a href="../front-end/index.html" class="breadcrumb-item">Web 前端</a><span class="breadcrumb-delimiter"> &gt; </span><a href="../front-end/gulp-imagemin.html" class="breadcrumb-item">gulp 压缩图片</a></div>
     <h1 class="article-title">gulp 压缩图片</h1>
     <div class="article">
-      <h3 id="安装">安装 <a class="markdownIt-Anchor" href="#安装">#</a></h3>
+      <h2 id="安装">安装 <a class="markdownIt-Anchor" href="#安装">#</a></h2>
 <pre class="hljs"><code>npm init -y
 npm install --save-dev gulp gulp-imagemin
 </code></pre>
-<h3 id="add-gulpfilejs">add gulpfile.js <a class="markdownIt-Anchor" href="#add-gulpfilejs">#</a></h3>
+<h2 id="add-gulpfilejs">add <code>gulpfile.js</code> <a class="markdownIt-Anchor" href="#add-gulpfilejs">#</a></h2>
 <pre class="hljs"><code><span class="hljs-keyword">const</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp'</span>);
 <span class="hljs-keyword">const</span> imagemin = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp-imagemin'</span>);
 
@@ -46,7 +46,7 @@ gulp.task(<span class="hljs-string">'compress'</span>, () =&gt;
         .pipe(gulp.dest(<span class="hljs-string">'dist/images'</span>))
 );
 </code></pre>
-<h3 id="压缩">压缩 <a class="markdownIt-Anchor" href="#压缩">#</a></h3>
+<h2 id="压缩">压缩 <a class="markdownIt-Anchor" href="#压缩">#</a></h2>
 <pre class="hljs"><code>gulp compress
 </code></pre>
 
@@ -99,7 +99,7 @@ gulp.task(<span class="hljs-string">'compress'</span>, () =&gt;
   var LOPPO = {};
   LOPPO.current_path = 'front-end/gulp-imagemin.md';
   LOPPO.relative_root_path = '../';
-  LOPPO.article_toc = "<ul class=\"markdownIt-TOC\">\n<li>\n<ul>\n<li><a href=\"#%E5%AE%89%E8%A3%85\">安装</a></li>\n<li><a href=\"#add-gulpfilejs\">add gulpfile.js</a></li>\n<li><a href=\"#%E5%8E%8B%E7%BC%A9\">压缩</a></li>\n</ul>\n</li>\n</ul>\n";
+  LOPPO.article_toc = "<ul class=\"markdownIt-TOC\">\n<li><a href=\"#%E5%AE%89%E8%A3%85\">安装</a></li>\n<li><a href=\"#add-gulpfilejs\">add <code>gulpfile.js</code></a></li>\n<li><a href=\"#%E5%8E%8B%E7%BC%A9\">压缩</a></li>\n</ul>\n";
 </script>
 <script src="../assets/js/app.js"></script>
 

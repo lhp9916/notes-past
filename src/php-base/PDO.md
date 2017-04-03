@@ -2,7 +2,7 @@
 
 [文档地址](http://php.net/manual/zh/intro.pdo.php)
 
-### 连接
+## 连接
 ```php
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass);
@@ -19,7 +19,7 @@ $dbh = null;
 ```
 要想关闭连接，需要销毁对象以确保所有剩余到它的引用都被删除，可以赋一个 NULL 值给对象变量。如果不明确地这么做，PHP 在脚本结束时会自动关闭连接。
 
-### 事务
+## 事务
 ```php
 try {  
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -36,7 +36,7 @@ try {
 }
 ```
 
-### 预处理语句
+## 预处理语句
 ```php
 $stmt = $dbh->prepare("INSERT INTO REGISTRY (name, value) VALUES (:name, :value)");
 $stmt->bindParam(':name', $name);
@@ -64,7 +64,7 @@ $stmt = $dbh->prepare("SELECT * FROM REGISTRY where name LIKE ?");
 $stmt->execute(array("%$_GET[name]%"));
 ```
 
-### 存储过程 
+## 存储过程 
 ```php
 //带输出参数调用存储过程
 $stmt = $dbh->prepare("CALL sp_returns_string(?)");

@@ -1,6 +1,6 @@
 # 跨域请求
 
-### 一、JSONP
+## JSONP
 
 前端：
 ```javascript
@@ -24,7 +24,7 @@ return $jsonp . "(" . $json_data . ")";
 ```
 JSONP只能用于GET方法。
 
-### 二、CORS
+## CORS
 
 CORS 是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource sharing）。[参考阮一峰老师博客](http://www.ruanyifeng.com/blog/2016/04/cors.html)。
 只需要在服务端添加这两行即可，前台无需任何变化。

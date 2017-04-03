@@ -23,7 +23,7 @@
 
 压缩： tar -jcvf filename.tar.bz2 dirname
 ```
-### .zip
+#### .zip
 ```
 解压： unzip filename.zip
 
