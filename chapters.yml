@@ -12,6 +12,7 @@
 - laravel/: Laravel
 - laravel/event.md: Laravel 的事件系统
 - laravel/upload.md: 文件上传
+- laravel/tinker.md: 使用 tinker 调试
 - linux/: Linux
 - linux/compress.md: linux 解压缩命令
 - linux/vim.md: vim 常用的命令
