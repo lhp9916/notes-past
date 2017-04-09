@@ -1,5 +1,6 @@
 - android/: Android
 - android/postDelayed.md: 循环任务
+- android/layout-split.md: 分类整理 layout 布局文件
 - License/: License
 - License/how-to-select.md: 如何选择开源许可证？
 - Restful-API/: Restful API
